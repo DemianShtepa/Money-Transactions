@@ -128,8 +128,11 @@ curl --request POST \
 # DB connection
 
 Host: localhost
+
 Database: paxful
+
 User: paxful
+
 Password: paxful
 
 # Tests
