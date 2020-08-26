@@ -23,12 +23,13 @@ doing ​docker-compose up
 1  . Clone repository:
 
 ```
-git clone https://github.com/antonshell/paxful-wallets-api.git
+git clone https://github.com/DemianShtepa/paxful-wallets-api.git
 ```
 
 2 . Run docker compose:
 
 ```
+cd paxful-wallets-api
 docker-compose up -d
 ```
 
