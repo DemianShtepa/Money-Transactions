@@ -18,34 +18,6 @@ several wallets that can be used to transfer funds between)
 - Provide a docker-compose.yml that can be used to run your solution by just
 doing ​docker-compose up
 
-# Run with docker
-
-1  . Clone repository:
-
-```
-git clone https://github.com/DemianShtepa/paxful-wallets-api.git
-```
-
-2 . Run docker compose:
-
-```
-cd paxful-wallets-api
-docker-compose up -d
-```
-
-3 . Load data:
-
-```
-docker-compose exec php-fpm php bin/console sample-data:load
-```
-
-4 . Health check:
-
-```
-curl --request GET \
-  --url http://127.0.0.1:18680'
-```
-
 # Run locally (without docker)
 
 1  . Clone repository
@@ -114,25 +86,47 @@ php bin/console sample-data:load
 ```
 
 # Api reference
+# Usage
 
 1 . Health check.
 
 ```
 curl --request GET \
-  --url http://127.0.0.1:8000/'
+  --url http://127.0.0.1:18680/
 ```
 
-2 . Create transaction.
+2 . Create transaction from user 1 to user 2
 
 ```
 curl --request POST \
-  --url http://127.0.0.1:8000/transaction \
+  --url http://127.0.0.1:18680/transaction \
   --header 'content-type: application/json' \
   --header 'password: user1' \
   --header 'username: user1@test.com' \
   --data '{
-	"source": 5,
-	"destination": 7,
+	"source": 1,
+	"destination": 3,
 	"amount": 1
 }'
+```
+
+2 . Create transaction from user 2 to user 1
+
+```
+curl --request POST \
+  --url http://127.0.0.1:18680/transaction \
+  --header 'content-type: application/json' \
+  --header 'password: user2' \
+  --header 'username: user2@test.com' \
+  --data '{
+	"source": 3,
+	"destination": 1,
+	"amount": 1
+}'
+```
+
+# Tests
+
+```
+docker-compose exec php-fpm ./bin/phpunit
 ```
