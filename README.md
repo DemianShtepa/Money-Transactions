@@ -135,11 +135,11 @@ curl --request POST \
 
 Host: localhost
 
-Database: paxful
+Database: transatcions
 
-User: paxful
+User: transatcions
 
-Password: paxful
+Password: transatcions
 
 # Tests
 
