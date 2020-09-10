@@ -1,10 +1,11 @@
 # Software engineer test assignment - Paxful 
 
+
+# Requirements
+
 You need to implement a backend application that would allow users to transfer funds
 between wallets. On every transaction, the system will need to take a commission of
 1.5%.
-
-# Requirements
 
 - Create a relational database schema
 
@@ -23,14 +24,14 @@ doing ​docker-compose up
 1  . Clone repository
 
 ```
-git clone https://github.com/DemianShtepa/paxful-wallets-api.git
+git clone https://github.com/DemianShtepa/money-transactions-service.git
 ```
 
 2 . Install dependencies
 
 ```
-cd paxful-wallets-api
-composer install
+cd money-transactions-service
+docker-compose up -d
 ```
 
 3 . Create database user
