@@ -29,14 +29,14 @@ doing ​docker-compose up
 1  . Clone repository
 
 ```
-git clone https://github.com/DemianShtepa/money-transactions-service.git
+git clone https://github.com/DemianShtepa/Money-Transactions.git
 ```
 
 2 . Install dependencies
 
 ```
-cd money-transactions-service
-docker-compose up -d
+cd Money-Transactions
+docker-compose up
 ```
 
 3 . Create database user
